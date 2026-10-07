@@ -29,10 +29,12 @@ footer{max-width:640px;margin:0 auto;padding:24px;color:#6B3F52;font-size:.9rem;
 </main>
 <footer>© 2026 Thibaud Piquet · <a href="index.html">Nine to Hero</a></footer>
 <script>
-// Le défi tient dans l'adresse : s = parcours, d = rang de départ, p = score à battre, n = prénom (facultatif).
+// Le défi tient dans l'adresse : s = parcours, d = rang de départ, p = score à battre, v = version du
+// générateur de parcours, n = prénom (facultatif).
 (function () {
   var q = new URLSearchParams(location.search);
   var seed = q.get('s') || '', score = q.get('p') || '', start = q.get('d') || '0';
+  var version = /^\d{1,3}$/.test(q.get('v') || '') ? q.get('v') : '1';
   var name = (q.get('n') || '').trim().slice(0, 20);
   var english = !/^fr/i.test(navigator.language || 'fr');
   var valid = /^\d{1,20}$/.test(seed) && /^\d{1,5}$/.test(score) && /^\d{1,3}$/.test(start);
@@ -56,7 +58,7 @@ footer{max-width:640px;margin:0 auto;padding:24px;color:#6B3F52;font-size:.9rem;
   } else if (english) {
     set('who', 'A friend challenges you');
   }
-  var link = 'ninetohero://defi?s=' + seed + '&d=' + start + '&p=' + score + (name ? '&n=' + encodeURIComponent(name) : '');
+  var link = 'ninetohero://defi?s=' + seed + '&d=' + start + '&p=' + score + '&v=' + version + (name ? '&n=' + encodeURIComponent(name) : '');
   document.getElementById('go').setAttribute('href', link);
 })();
 </script>
