@@ -2,63 +2,64 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nine to Hero — Défi</title>
-<meta property="og:title" content="Nine to Hero — on te lance un défi">
-<meta property="og:description" content="Même parcours, mêmes obstacles : à toi de faire mieux.">
-<style>body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;color:#1B1640;background:#FBEEE3}
-header{background:linear-gradient(#120F33,#2B2160 60%,#7A4E8A);color:#FBEEE3;padding:56px 24px 40px;text-align:center}
-h1{margin:0;font-size:2.2rem;letter-spacing:.04em}header p{margin:.4rem 0 0;color:#E4D8F0}
-main{max-width:640px;margin:0 auto;padding:24px;text-align:center}a{color:#A83D63}
-.score{font-size:4.5rem;font-weight:700;line-height:1.1;margin:.2rem 0}
-.who{font-size:1.2rem;margin:1.2rem 0 0}.what{color:#6B3F52;margin:0}
-.go{display:inline-block;margin:1.6rem 0 .6rem;padding:16px 40px;border-radius:999px;background:#1B1640;color:#FBEEE3;font-weight:700;letter-spacing:.08em;text-decoration:none}
-.get{display:block;margin:.4rem 0 0}.small{color:#6B3F52;font-size:.9rem;margin-top:2rem}
-footer{max-width:640px;margin:0 auto;padding:24px;color:#6B3F52;font-size:.9rem;text-align:center}</style>
+<meta name="description" content="Le bouton ouvre le jeu sur ton iPhone ou ton iPad. Cette page ne collecte rien : le défi tient tout entier dans le lien.">
+<meta property="og:title" content="Nine to Hero — Défi">
+<meta property="og:description" content="Le bouton ouvre le jeu sur ton iPhone ou ton iPad. Cette page ne collecte rien : le défi tient tout entier dans le lien.">
+<meta property="og:image" content="https://magicthp.github.io/ninetohero/img/icone.png">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#120F33">
+<link rel="icon" href="img/icone.png">
+<link rel="apple-touch-icon" href="img/icone.png">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header><h1>Nine to Hero</h1><p id="tagline">Un tap, deux mondes</p></header>
-<main>
-<p class="who" id="who">Un ami te lance un défi</p>
+<header class="bandeau">
+<div class="nuit" style="padding-bottom:80px">
+<div class="etoiles"></div><div class="astre lune"></div>
+<p class="espace clair" id="tag">Un tap, deux mondes</p>
+<h1 class="titre petit">NINE TO HERO</h1>
+<p class="slogan" id="who">Un ami te lance un défi</p>
 <p class="score" id="score">—</p>
-<p class="what" id="what">à battre, sur le même parcours : mêmes obstacles, mêmes étoiles.</p>
-<a class="go" id="go" href="#">RELEVER LE DÉFI</a>
-<a class="get" id="get" href="https://testflight.apple.com/join/EZyRss8N">Je n'ai pas encore le jeu</a>
-<p class="small" id="note">Le bouton ouvre le jeu sur ton iPhone ou ton iPad. Cette page ne collecte rien : le défi tient tout entier dans le lien.</p>
-</main>
-<footer>© 2026 Thibaud Piquet · <a href="index.html">Nine to Hero</a></footer>
+<img class="heros vol" src="img/heroine-portrait.png" alt="" width="480" height="307">
+<svg class="ville" viewBox="0 0 800 64" preserveAspectRatio="none" aria-hidden="true"><path fill="#1E1848" d="M0 64V38h40V22h30v16h26V10h22v28h30V30h40V16h18v22h34V26h28V6h20v20h24v12h40V24h36v40zM430 64V28h30V12h26v26h44V30h30V18h24v20h40V8h22v30h30V26h36v12h44V20h24v44z"/><g fill="#FFD08A"><rect x="104" y="18" width="4" height="5"/><rect x="104" y="30" width="4" height="5"/><rect x="292" y="14" width="4" height="5"/><rect x="292" y="26" width="4" height="5"/><rect x="470" y="20" width="4" height="5"/><rect x="606" y="16" width="4" height="5"/><rect x="606" y="28" width="4" height="5"/></g></svg>
+</div>
+<div class="ligne"></div>
+<div class="cta">
+<p class="sombre" id="what">à battre, sur le même parcours : mêmes obstacles, mêmes étoiles.</p>
+<a class="pilule pleine" id="go" href="#">Relever le défi</a>
+<p><a id="get" href="https://testflight.apple.com/join/T99g8FMu">Je n&#x27;ai pas encore le jeu</a></p>
+<p class="petit-texte" id="note">Le bouton ouvre le jeu sur ton iPhone ou ton iPad. Cette page ne collecte rien : le défi tient tout entier dans le lien.</p>
+</div>
+</header>
+<footer><img src="img/icone.png" alt="" width="64" height="64" class="icone"><nav><a href="index.html">Nine to Hero</a></nav><p>© 2026 Thibaud Piquet</p></footer>
 <script>
 // Le défi tient dans l'adresse : s = parcours, d = rang de départ, p = score à battre, v = version du
-// générateur de parcours, n = prénom (facultatif), w = monde proposé (facultatif).
+// générateur de parcours, n = prénom (facultatif), w = monde proposé (facultatif, 1.1). La langue est celle du
+// navigateur, anglais par défaut.
 (function () {
+  var T = {"fr": {"tag": "Un tap, deux mondes", "who": "Un ami te lance un défi", "named": "{n} te lance un défi", "what": "à battre, sur le même parcours : mêmes obstacles, mêmes étoiles.", "go": "Relever le défi", "get": "Je n'ai pas encore le jeu", "bad": "Ce lien de défi est incomplet.", "note": "Le bouton ouvre le jeu sur ton iPhone ou ton iPad. Cette page ne collecte rien : le défi tient tout entier dans le lien."}, "en": {"tag": "One tap, two worlds", "who": "A friend has challenged you", "named": "{n} has challenged you", "what": "to beat, on the very same course: same obstacles, same stars.", "go": "Accept the challenge", "get": "Get the game", "bad": "This challenge link is incomplete.", "note": "The button opens the game on your iPhone or iPad. This page collects no data: everything needed for the challenge is in the link."}, "de": {"tag": "Ein Tipp, zwei Welten", "who": "Jemand fordert dich heraus", "named": "{n} fordert dich heraus", "what": "zu schlagen, auf genau derselben Strecke: dieselben Hindernisse, dieselben Sterne.", "go": "Herausforderung annehmen", "get": "Ich habe das Spiel noch nicht", "bad": "Dieser Link ist unvollständig.", "note": "Die Taste öffnet das Spiel auf deinem iPhone oder iPad. Diese Seite erfasst nichts: Die Herausforderung steckt komplett im Link."}, "es": {"tag": "Un toque, dos mundos", "who": "Un amigo te ha retado", "named": "{n} te ha retado", "what": "que superar, en el mismo recorrido: mismos obstáculos, mismas estrellas.", "go": "Aceptar el reto", "get": "Todavía no tengo el juego", "bad": "Este enlace de reto está incompleto.", "note": "El botón abre el juego en tu iPhone o iPad. Esta página no recopila nada: todo el reto está en el enlace."}, "it": {"tag": "Un tocco, due mondi", "who": "Un amico ti ha sfidato", "named": "{n} ti ha sfidato", "what": "da battere, sullo stesso percorso: stessi ostacoli, stesse stelle.", "go": "Accetta la sfida", "get": "Non ho ancora il gioco", "bad": "Questo link di sfida è incompleto.", "note": "Il pulsante apre il gioco sul tuo iPhone o iPad. Questa pagina non raccoglie nulla: tutta la sfida è nel link."}};
   var q = new URLSearchParams(location.search);
   var seed = q.get('s') || '', score = q.get('p') || '', start = q.get('d') || '0';
   var version = /^\d{1,3}$/.test(q.get('v') || '') ? q.get('v') : '1';
   var name = Array.from((q.get('n') || '').trim()).slice(0, 20).join('');
   var world = /^[a-z0-9-]{1,30}$/.test(q.get('w') || '') ? q.get('w') : '';
-  var english = !/^fr/i.test(navigator.language || 'fr');
-  var valid = /^\d{1,20}$/.test(seed) && /^\d{1,5}$/.test(score) && /^\d{1,3}$/.test(start);
+  var lang = (navigator.language || 'en').slice(0, 2).toLowerCase();
+  var t = T[lang] || T.en;
+  document.documentElement.lang = T[lang] ? lang : 'en';
   function set(id, text) { document.getElementById(id).textContent = text; }
-  if (english) {
-    document.documentElement.lang = 'en';
-    set('tagline', 'One tap, two worlds');
-    set('what', 'to beat, on the very same course: same obstacles, same stars.');
-    set('go', 'ACCEPT THE CHALLENGE');
-    set('get', "Get the game");
-    set('note', 'The button opens the game on your iPhone or iPad. This page collects no data: everything needed for the challenge is in the link.');
-  }
+  ['tag', 'what', 'go', 'get', 'note'].forEach(function (k) { set(k, t[k]); });
+  set('who', t.who);
+  var valid = /^\d{1,20}$/.test(seed) && /^\d{1,5}$/.test(score) && /^\d{1,3}$/.test(start);
   if (!valid) {
-    set('who', english ? 'This challenge link is incomplete.' : 'Ce lien de défi est incomplet.');
+    set('who', t.bad);
     document.getElementById('go').style.display = 'none';
     return;
   }
   set('score', score);
-  if (name) {
-    set('who', english ? name + ' has challenged you' : name + ' te lance un défi');
-  } else if (english) {
-    set('who', 'A friend has challenged you');
-  }
+  if (name) set('who', t.named.replace('{n}', name));
   var link = 'ninetohero://defi?s=' + seed + '&d=' + start + '&p=' + score + '&v=' + version + (name ? '&n=' + encodeURIComponent(name) : '') + (world ? '&w=' + world : '');
   document.getElementById('go').setAttribute('href', link);
 })();
