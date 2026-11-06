@@ -57,8 +57,7 @@
 <section class="figurines">
 <p class="espace clair">Las figuras</p>
 <h2>Elige quién corre y quién vuela</h2>
-<div class="grille"><div class="carte"><a rel="ar" href="../img/3d/heros-vol.usdz"><img src="../img/heros-portrait.png" alt="El héroe" loading="lazy"></a><p>El héroe</p><p class="voir-3d">Ver en 3D ›</p></div><div class="carte"><a rel="ar" href="../img/3d/heroine-vol.usdz"><img src="../img/heroine-portrait.png" alt="La heroína" loading="lazy"></a><p>La heroína</p><p class="voir-3d">Ver en 3D ›</p></div><div class="carte"><a rel="ar" href="../img/3d/employe-course.usdz"><img src="../img/employe-portrait-0.png" alt="El empleado" loading="lazy"></a><p>El empleado</p><p class="voir-3d">Ver en 3D ›</p></div><div class="carte"><a rel="ar" href="../img/3d/employee-course.usdz"><img src="../img/employee-portrait-0.png" alt="La empleada" loading="lazy"></a><p>La empleada</p><p class="voir-3d">Ver en 3D ›</p></div></div>
-<p class="note-ar">En iPhone y iPad, «Ver en 3D» pone la figura sobre tu mesa, en realidad aumentada.</p>
+<div class="grille"><div class="carte"><img src="../img/heros-portrait.png" alt="El héroe" loading="lazy"><p>El héroe</p></div><div class="carte"><img src="../img/heroine-portrait.png" alt="La heroína" loading="lazy"><p>La heroína</p></div><div class="carte"><img src="../img/employe-portrait-0.png" alt="El empleado" loading="lazy"><p>El empleado</p></div><div class="carte"><img src="../img/employee-portrait-0.png" alt="La empleada" loading="lazy"><p>La empleada</p></div></div>
 </section>
 </main>
 <footer>
@@ -66,16 +65,7 @@
 <nav><a href="../es/aide.html">Ayuda</a><a href="../es/confidentialite.html">Privacidad</a><a href="mailto:ninetohero@icloud.com">Contacto</a></nav>
 <p>No se recopila ningún dato. © 2026 Thibaud Piquet</p>
 </footer>
-<script>
-(function () {
-  var a = document.createElement('a');
-  if (a.relList && a.relList.supports && a.relList.supports('ar')) {
-    document.documentElement.classList.add('ar');
-  } else {
-    document.querySelectorAll('a[rel="ar"]').forEach(function (link) { link.removeAttribute('href'); });
-  }
-})();
-</script>
+
 
 </body>
 </html>

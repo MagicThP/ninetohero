@@ -57,8 +57,7 @@
 <section class="figurines">
 <p class="espace clair">The figures</p>
 <h2>Choose who runs, and who flies</h2>
-<div class="grille"><div class="carte"><a rel="ar" href="img/3d/heros-vol.usdz"><img src="img/heros-portrait.png" alt="The hero" loading="lazy"></a><p>The hero</p><p class="voir-3d">View in 3D ›</p></div><div class="carte"><a rel="ar" href="img/3d/heroine-vol.usdz"><img src="img/heroine-portrait.png" alt="The heroine" loading="lazy"></a><p>The heroine</p><p class="voir-3d">View in 3D ›</p></div><div class="carte"><a rel="ar" href="img/3d/employe-course.usdz"><img src="img/employe-portrait-0.png" alt="The worker" loading="lazy"></a><p>The worker</p><p class="voir-3d">View in 3D ›</p></div><div class="carte"><a rel="ar" href="img/3d/employee-course.usdz"><img src="img/employee-portrait-0.png" alt="The worker" loading="lazy"></a><p>The worker</p><p class="voir-3d">View in 3D ›</p></div></div>
-<p class="note-ar">On iPhone and iPad, “View in 3D” puts the figure on your table, in augmented reality.</p>
+<div class="grille"><div class="carte"><img src="img/heros-portrait.png" alt="The hero" loading="lazy"><p>The hero</p></div><div class="carte"><img src="img/heroine-portrait.png" alt="The heroine" loading="lazy"><p>The heroine</p></div><div class="carte"><img src="img/employe-portrait-0.png" alt="The worker" loading="lazy"><p>The worker</p></div><div class="carte"><img src="img/employee-portrait-0.png" alt="The worker" loading="lazy"><p>The worker</p></div></div>
 </section>
 </main>
 <footer>
@@ -66,16 +65,7 @@
 <nav><a href="en/aide.html">Help</a><a href="en/confidentialite.html">Privacy</a><a href="mailto:ninetohero@icloud.com">Contact</a></nav>
 <p>No data collected. © 2026 Thibaud Piquet</p>
 </footer>
-<script>
-(function () {
-  var a = document.createElement('a');
-  if (a.relList && a.relList.supports && a.relList.supports('ar')) {
-    document.documentElement.classList.add('ar');
-  } else {
-    document.querySelectorAll('a[rel="ar"]').forEach(function (link) { link.removeAttribute('href'); });
-  }
-})();
-</script>
+
 <script>
 (function () {
   var labels = {fr:'Ce site existe en français',de:'Diese Seite gibt es auf Deutsch',es:'Este sitio está en español',it:'Questo sito è in italiano'};

@@ -57,8 +57,7 @@
 <section class="figurines">
 <p class="espace clair">Les figurines</p>
 <h2>Choisis qui court, et qui vole</h2>
-<div class="grille"><div class="carte"><a rel="ar" href="../img/3d/heros-vol.usdz"><img src="../img/heros-portrait.png" alt="Le héros" loading="lazy"></a><p>Le héros</p><p class="voir-3d">Voir en 3D ›</p></div><div class="carte"><a rel="ar" href="../img/3d/heroine-vol.usdz"><img src="../img/heroine-portrait.png" alt="L&#x27;héroïne" loading="lazy"></a><p>L&#x27;héroïne</p><p class="voir-3d">Voir en 3D ›</p></div><div class="carte"><a rel="ar" href="../img/3d/employe-course.usdz"><img src="../img/employe-portrait-0.png" alt="L&#x27;employé" loading="lazy"></a><p>L&#x27;employé</p><p class="voir-3d">Voir en 3D ›</p></div><div class="carte"><a rel="ar" href="../img/3d/employee-course.usdz"><img src="../img/employee-portrait-0.png" alt="L&#x27;employée" loading="lazy"></a><p>L&#x27;employée</p><p class="voir-3d">Voir en 3D ›</p></div></div>
-<p class="note-ar">Sur iPhone et iPad, « Voir en 3D » pose la figurine sur ta table, en réalité augmentée.</p>
+<div class="grille"><div class="carte"><img src="../img/heros-portrait.png" alt="Le héros" loading="lazy"><p>Le héros</p></div><div class="carte"><img src="../img/heroine-portrait.png" alt="L&#x27;héroïne" loading="lazy"><p>L&#x27;héroïne</p></div><div class="carte"><img src="../img/employe-portrait-0.png" alt="L&#x27;employé" loading="lazy"><p>L&#x27;employé</p></div><div class="carte"><img src="../img/employee-portrait-0.png" alt="L&#x27;employée" loading="lazy"><p>L&#x27;employée</p></div></div>
 </section>
 </main>
 <footer>
@@ -66,16 +65,7 @@
 <nav><a href="../fr/aide.html">Aide</a><a href="../fr/confidentialite.html">Confidentialité</a><a href="mailto:ninetohero@icloud.com">Contact</a></nav>
 <p>Aucune donnée collectée. © 2026 Thibaud Piquet</p>
 </footer>
-<script>
-(function () {
-  var a = document.createElement('a');
-  if (a.relList && a.relList.supports && a.relList.supports('ar')) {
-    document.documentElement.classList.add('ar');
-  } else {
-    document.querySelectorAll('a[rel="ar"]').forEach(function (link) { link.removeAttribute('href'); });
-  }
-})();
-</script>
+
 
 </body>
 </html>
