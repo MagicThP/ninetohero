@@ -17,6 +17,8 @@ h2{font-size:1.7rem;margin:.2rem 0 1rem;line-height:1.15}
 .slogan{margin:.4rem 0 0;color:var(--lavande)}
 .pilule{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.8rem;border-radius:999px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-size:.95rem}
 .pilule.pleine{background:var(--encre);color:var(--creme)}
+.badge-store{display:inline-block;padding:6px;line-height:0}
+.badge-store img{height:56px;width:auto}
 .pilule:focus-visible,a:focus-visible{outline:3px solid var(--corail);outline-offset:3px}
 .langues{position:absolute;top:16px;right:16px;z-index:5;display:flex;gap:2px;padding:4px;border:1.5px solid rgba(251,238,227,.6);border-radius:999px}
 .langues a{color:var(--creme);text-decoration:none;font-size:.78rem;font-weight:700;padding:.3rem .55rem;border-radius:999px}
